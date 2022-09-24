@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mysql:
+    build: ./docker/mysql
+    container_name: hello_springboot_kt_mysql
+    volumes:
+      - ./docker/mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 3306:3306
